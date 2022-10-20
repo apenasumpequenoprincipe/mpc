@@ -36,6 +36,7 @@ section div {
     width: 100%;
     border-radius: 3px;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent; 
 }
 
 
