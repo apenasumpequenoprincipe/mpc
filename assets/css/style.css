@@ -1,0 +1,98 @@
+:root {
+    --color01: #454545;
+    --color02: #505050;
+    --color03: #3F3F3F;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+main {
+    background-color: var(--color03);
+    padding: 10px;
+    height: 100vh;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: var(--color01);
+    height: 100%;
+    width: 100%;
+    max-height: 90vw;
+    padding: 20px;
+}
+
+section div {
+    background-color: var(--color02);
+    border: 1px solid black;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.291);
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+
+section div:active {
+    background-color: #505050;
+    border: 1px solid red;
+    box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.291),
+    0 0 30px 2px rgba(255, 34, 34, 0.291);
+    /* box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.291); */
+
+}
+
+.ativo {
+    animation-name: ativado;
+    animation-duration: 100ms;
+}
+
+@keyframes ativado {
+    from {background-color: #505050;
+        border: 1px solid red;
+        box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.291),
+        0 0 30px 2px rgba(255, 34, 34, 0.291);}
+
+    to {
+        background-color: #505050;
+        border: 1px solid red;
+        box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.291),
+        0 0 30px 2px rgba(255, 34, 34, 0.291); 
+    }
+}
+
+section div::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 97%;
+    border-top: 3px solid #b8b8b82d;
+    border-bottom: 3px solid #7171713a;
+    
+}
+
+/* section div::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #93939358;
+    position: absolute;
+    top: 0%;
+    border-radius: 2px;
+}
+
+section div::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #65656558;
+    position: absolute;
+    bottom: 0%;
+    border-radius: 2px;
+} */
